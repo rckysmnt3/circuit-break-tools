@@ -1,0 +1,17 @@
+{
+  "name": "circuit-break-tools",
+  "version": "0.1.0",
+  "description": "A small circuit breaker for JavaScript with a deliberate half-open probing policy: exactly one probe is admitted at a time.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {}
+}
