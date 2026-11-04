@@ -54,3 +54,10 @@ A frozen object: `SUCCESS`, `FAILURE`, `REJECTED`.
 ## The awkward edge
 
 Because state transitions are lazy, reading `breaker.state` after the reset window has elapsed reports `'half-open'` even though no probe has been admitted yet. The transition is materialised by the next call to `execute`. If you need to observe the transition itself, call `execute` — there is no event emitter and no background timer, which keeps the library free of scheduling surprises.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
