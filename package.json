@@ -1,6 +1,6 @@
 {
   "name": "circuit-break-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small circuit breaker for JavaScript with a deliberate half-open probing policy: exactly one probe is admitted at a time.",
   "type": "module",
   "main": "src/index.js",
